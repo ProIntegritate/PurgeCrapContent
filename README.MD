@@ -11,12 +11,12 @@ A file mover that takes one argument, a text file with definitions of content yo
   
 The required definition text file is just a standard text file with a definition on each line like:
 
-  #<html>
-  #<span>
-  #<body>
-  #Bandwidth Limit Exceeded
-  #Account Suspended
-  #Page not found
+  -<html>
+  -<span>
+  -<body>
+  -Bandwidth Limit Exceeded
+  -Account Suspended
+  -Page not found
 
 One definition on each line, no quotes or spaces before or after as they would be part of the definition.
 
@@ -26,11 +26,11 @@ to identify HTML content, separate it and get rid of it and other unwanted forma
 
 You can also identify specific file formats by using common tags in the file
 
-  #minor_version = MP3 files
-  #u?fI          = WMA files
-  #WAVEfmt       = Wav files
-  #IHDR          = PNG files
-  #GIF87a        = GIF files
+  -minor_version = MP3 files
+  -u?fI          = WMA files
+  -WAVEfmt       = Wav files
+  -IHDR          = PNG files
+  -GIF87a        = GIF files
 
 This would find and move those files into the subfolder to separate them from the content you want to focus
 on. Personally i just delete the files and move on.
