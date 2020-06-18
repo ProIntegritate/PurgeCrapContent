@@ -5,9 +5,11 @@ A file mover that takes one argument, a text file with definitions of content yo
   
   This will start scanning .bin files for any defined lines in the text.txt
   file and if a match is found, the file will be moved to a subfolder (2delete)
-  that is automatically created each time the program starts.
+  that is automatically created each time the program starts. I chose bin because
+  i name all scraped content .bin to make sure that there are no active file
+  association, and then do post process identification using file header bytes.
   
-The definition text file is just a standard text file with a definition on each line like:
+The required definition text file is just a standard text file with a definition on each line like:
 
   <html>
   <span>
@@ -16,7 +18,7 @@ The definition text file is just a standard text file with a definition on each 
   Account Suspended
   Page not found
 
-One definition on each line, no spaces before or after as they would be part of the definition.
+One definition on each line, no quotes or spaces before or after as they would be part of the definition.
 
 The example above would identify HTML content in the scanned .bin files and move them, once that is done
 you can navigate to the subfolder and process the content further, or delete the content. I use this myself
@@ -30,4 +32,5 @@ You can also identify specific file formats by using common tags in the file
   IHDR          = PNG files
   GIF87a        = GIF files
 
-This would find and move those files into the subfolder to separate them from the content you want to focus on.
+This would find and move those files into the subfolder to separate them from the content you want to focus
+on. Personally i just delete the files and move on.
