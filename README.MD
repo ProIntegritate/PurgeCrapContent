@@ -11,9 +11,9 @@ A file mover that takes one argument, a text file with definitions of content yo
   
 The required definition text file is just a standard text file with a definition on each line like:
 
-  - <html>
-  - <span>
-  - <body>
+  - \<html>
+  - \<span>
+  - \<body>
   - Bandwidth Limit Exceeded
   - Account Suspended
   - Page not found
